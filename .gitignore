@@ -2,3 +2,6 @@ node_modules/
 dist/
 .DS_Store
 *.local
+
+# Compiled JS output (source is TypeScript — never commit compiled artifacts)
+src/**/*.js
