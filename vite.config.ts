@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   root: ".",
+  base: "/patrick-portfolio-v3/",
   build: {
     outDir: "dist",
     sourcemap: false,
