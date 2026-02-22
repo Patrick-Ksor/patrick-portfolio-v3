@@ -1,0 +1,24 @@
+{
+  "name": "patrick-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^4.0.18",
+    "jsdom": "^28.1.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11",
+    "vitest": "^4.0.18"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5"
+  }
+}
