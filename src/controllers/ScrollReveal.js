@@ -10,7 +10,7 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _ScrollReveal_elements, _ScrollReveal_getFrom;
-import gsap from 'gsap';
+import gsap from "gsap";
 /**
  * ScrollReveal
  * Reads [data-reveal] attributes and creates a ScrollTrigger
@@ -24,18 +24,18 @@ export class ScrollReveal {
             configurable: true,
             writable: true,
             value: () => {
-                __classPrivateFieldGet(this, _ScrollReveal_elements, "f").forEach(el => {
-                    const direction = (el.dataset['reveal'] ?? 'up');
+                __classPrivateFieldGet(this, _ScrollReveal_elements, "f").forEach((el) => {
+                    const direction = (el.dataset["reveal"] ?? "up");
                     const from = __classPrivateFieldGet(this, _ScrollReveal_getFrom, "f").call(this, direction);
                     gsap.fromTo(el, from, {
                         opacity: 1,
                         x: 0,
                         y: 0,
                         duration: 0.85,
-                        ease: 'power3.out',
+                        ease: "power3.out",
                         scrollTrigger: {
                             trigger: el,
-                            start: 'top 88%',
+                            start: "top 88%",
                             once: true,
                         },
                     });
@@ -52,7 +52,7 @@ export class ScrollReveal {
             };
             return { ...base, ...offsets[direction] };
         });
-        __classPrivateFieldSet(this, _ScrollReveal_elements, document.querySelectorAll('[data-reveal]'), "f");
+        __classPrivateFieldSet(this, _ScrollReveal_elements, document.querySelectorAll("[data-reveal]"), "f");
     }
 }
 _ScrollReveal_elements = new WeakMap(), _ScrollReveal_getFrom = new WeakMap();

@@ -10,8 +10,8 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _ProjectCards_cards, _ProjectCards_animateEntrance, _ProjectCards_bindHoverTilt, _ProjectCards_onEnter, _ProjectCards_onMove, _ProjectCards_onLeave;
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 /**
  * ProjectCards
  * Staggered entrance via ScrollTrigger.batch, plus a perspective
@@ -33,31 +33,31 @@ export class ProjectCards {
         _ProjectCards_animateEntrance.set(this, () => {
             gsap.set(__classPrivateFieldGet(this, _ProjectCards_cards, "f"), { opacity: 0, y: 60 });
             ScrollTrigger.batch(__classPrivateFieldGet(this, _ProjectCards_cards, "f"), {
-                start: 'top 88%',
+                start: "top 88%",
                 once: true,
-                onEnter: batch => {
+                onEnter: (batch) => {
                     gsap.to(batch, {
                         opacity: 1,
                         y: 0,
                         duration: 0.75,
                         stagger: 0.15,
-                        ease: 'power3.out',
+                        ease: "power3.out",
                     });
                 },
             });
         });
         _ProjectCards_bindHoverTilt.set(this, () => {
-            __classPrivateFieldGet(this, _ProjectCards_cards, "f").forEach(card => {
-                card.addEventListener('mouseenter', __classPrivateFieldGet(this, _ProjectCards_onEnter, "f"));
-                card.addEventListener('mousemove', __classPrivateFieldGet(this, _ProjectCards_onMove, "f"));
-                card.addEventListener('mouseleave', __classPrivateFieldGet(this, _ProjectCards_onLeave, "f"));
+            __classPrivateFieldGet(this, _ProjectCards_cards, "f").forEach((card) => {
+                card.addEventListener("mouseenter", __classPrivateFieldGet(this, _ProjectCards_onEnter, "f"));
+                card.addEventListener("mousemove", __classPrivateFieldGet(this, _ProjectCards_onMove, "f"));
+                card.addEventListener("mouseleave", __classPrivateFieldGet(this, _ProjectCards_onLeave, "f"));
             });
         });
         _ProjectCards_onEnter.set(this, (e) => {
             gsap.to(e.currentTarget, {
                 scale: 1.02,
                 duration: 0.3,
-                ease: 'power2.out',
+                ease: "power2.out",
             });
         });
         _ProjectCards_onMove.set(this, (e) => {
@@ -71,7 +71,7 @@ export class ProjectCards {
                 rotateX: -dy * 4,
                 transformPerspective: 800,
                 duration: 0.35,
-                ease: 'power2.out',
+                ease: "power2.out",
             });
         });
         _ProjectCards_onLeave.set(this, (e) => {
@@ -80,10 +80,10 @@ export class ProjectCards {
                 rotateX: 0,
                 rotateY: 0,
                 duration: 0.55,
-                ease: 'elastic.out(1, 0.6)',
+                ease: "elastic.out(1, 0.6)",
             });
         });
-        __classPrivateFieldSet(this, _ProjectCards_cards, document.querySelectorAll('.project-card'), "f");
+        __classPrivateFieldSet(this, _ProjectCards_cards, document.querySelectorAll(".project-card"), "f");
     }
 }
 _ProjectCards_cards = new WeakMap(), _ProjectCards_animateEntrance = new WeakMap(), _ProjectCards_bindHoverTilt = new WeakMap(), _ProjectCards_onEnter = new WeakMap(), _ProjectCards_onMove = new WeakMap(), _ProjectCards_onLeave = new WeakMap();

@@ -10,7 +10,7 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _BlobAnimation_blobs;
-import gsap from 'gsap';
+import gsap from "gsap";
 /**
  * BlobAnimation
  * Animates the three hero background blobs with independent
@@ -33,7 +33,7 @@ export class BlobAnimation {
                         duration: 6 + i * 1.5,
                         repeat: -1,
                         yoyo: true,
-                        ease: 'sine.inOut',
+                        ease: "sine.inOut",
                         delay: i * 0.8,
                     });
                     // Slow rotation layered on top
@@ -42,12 +42,12 @@ export class BlobAnimation {
                         duration: 10 + i * 2,
                         repeat: -1,
                         yoyo: true,
-                        ease: 'none',
+                        ease: "none",
                     });
                 });
             }
         });
-        __classPrivateFieldSet(this, _BlobAnimation_blobs, document.querySelectorAll('.hero__blob'), "f");
+        __classPrivateFieldSet(this, _BlobAnimation_blobs, document.querySelectorAll(".hero__blob"), "f");
     }
 }
 _BlobAnimation_blobs = new WeakMap();

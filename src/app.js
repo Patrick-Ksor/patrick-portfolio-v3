@@ -4,17 +4,17 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _App_nav, _App_hero, _App_blobs, _App_reveal, _App_cards, _App_buttons, _App_scroll, _App_form, _App_footer;
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { NavController } from './controllers/NavController';
-import { HeroAnimation } from './controllers/HeroAnimation';
-import { BlobAnimation } from './controllers/BlobAnimation';
-import { ScrollReveal } from './controllers/ScrollReveal';
-import { ProjectCards } from './controllers/ProjectCards';
-import { ButtonAnimations } from './controllers/ButtonAnimations';
-import { SmoothScroll } from './controllers/SmoothScroll';
-import { ContactForm } from './controllers/ContactForm';
-import { Footer } from './controllers/Footer';
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { NavController } from "./controllers/NavController";
+import { HeroAnimation } from "./controllers/HeroAnimation";
+import { BlobAnimation } from "./controllers/BlobAnimation";
+import { ScrollReveal } from "./controllers/ScrollReveal";
+import { ProjectCards } from "./controllers/ProjectCards";
+import { ButtonAnimations } from "./controllers/ButtonAnimations";
+import { SmoothScroll } from "./controllers/SmoothScroll";
+import { ContactForm } from "./controllers/ContactForm";
+import { Footer } from "./controllers/Footer";
 /**
  * App
  * Root orchestrator.

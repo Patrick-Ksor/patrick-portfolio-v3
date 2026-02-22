@@ -25,7 +25,7 @@ export class Footer {
                 __classPrivateFieldGet(this, _Footer_yearEl, "f").textContent = new Date().getFullYear().toString();
             }
         });
-        __classPrivateFieldSet(this, _Footer_yearEl, document.getElementById('footerYear'), "f");
+        __classPrivateFieldSet(this, _Footer_yearEl, document.getElementById("footerYear"), "f");
     }
 }
 _Footer_yearEl = new WeakMap();

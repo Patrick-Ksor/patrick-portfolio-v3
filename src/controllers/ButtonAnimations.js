@@ -10,7 +10,7 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _ButtonAnimations_buttons, _ButtonAnimations_onEnter, _ButtonAnimations_onLeave, _ButtonAnimations_onPress, _ButtonAnimations_onRelease;
-import gsap from 'gsap';
+import gsap from "gsap";
 /**
  * ButtonAnimations
  * Attaches GSAP scale micro-animations to every .btn element.
@@ -24,11 +24,11 @@ export class ButtonAnimations {
             configurable: true,
             writable: true,
             value: () => {
-                __classPrivateFieldGet(this, _ButtonAnimations_buttons, "f").forEach(btn => {
-                    btn.addEventListener('mouseenter', __classPrivateFieldGet(this, _ButtonAnimations_onEnter, "f"));
-                    btn.addEventListener('mouseleave', __classPrivateFieldGet(this, _ButtonAnimations_onLeave, "f"));
-                    btn.addEventListener('mousedown', __classPrivateFieldGet(this, _ButtonAnimations_onPress, "f"));
-                    btn.addEventListener('mouseup', __classPrivateFieldGet(this, _ButtonAnimations_onRelease, "f"));
+                __classPrivateFieldGet(this, _ButtonAnimations_buttons, "f").forEach((btn) => {
+                    btn.addEventListener("mouseenter", __classPrivateFieldGet(this, _ButtonAnimations_onEnter, "f"));
+                    btn.addEventListener("mouseleave", __classPrivateFieldGet(this, _ButtonAnimations_onLeave, "f"));
+                    btn.addEventListener("mousedown", __classPrivateFieldGet(this, _ButtonAnimations_onPress, "f"));
+                    btn.addEventListener("mouseup", __classPrivateFieldGet(this, _ButtonAnimations_onRelease, "f"));
                 });
             }
         });
@@ -37,31 +37,31 @@ export class ButtonAnimations {
             gsap.to(e.currentTarget, {
                 scale: 1.05,
                 duration: 0.25,
-                ease: 'power2.out',
+                ease: "power2.out",
             });
         });
         _ButtonAnimations_onLeave.set(this, (e) => {
             gsap.to(e.currentTarget, {
                 scale: 1,
                 duration: 0.35,
-                ease: 'elastic.out(1, 0.5)',
+                ease: "elastic.out(1, 0.5)",
             });
         });
         _ButtonAnimations_onPress.set(this, (e) => {
             gsap.to(e.currentTarget, {
                 scale: 0.96,
                 duration: 0.1,
-                ease: 'power2.in',
+                ease: "power2.in",
             });
         });
         _ButtonAnimations_onRelease.set(this, (e) => {
             gsap.to(e.currentTarget, {
                 scale: 1.05,
                 duration: 0.2,
-                ease: 'power2.out',
+                ease: "power2.out",
             });
         });
-        __classPrivateFieldSet(this, _ButtonAnimations_buttons, document.querySelectorAll('.btn'), "f");
+        __classPrivateFieldSet(this, _ButtonAnimations_buttons, document.querySelectorAll(".btn"), "f");
     }
 }
 _ButtonAnimations_buttons = new WeakMap(), _ButtonAnimations_onEnter = new WeakMap(), _ButtonAnimations_onLeave = new WeakMap(), _ButtonAnimations_onPress = new WeakMap(), _ButtonAnimations_onRelease = new WeakMap();

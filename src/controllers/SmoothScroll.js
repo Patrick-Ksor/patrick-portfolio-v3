@@ -25,21 +25,23 @@ export class SmoothScroll {
             configurable: true,
             writable: true,
             value: () => {
-                __classPrivateFieldGet(this, _SmoothScroll_anchors, "f").forEach(anchor => anchor.addEventListener('click', __classPrivateFieldGet(this, _SmoothScroll_handleClick, "f")));
+                __classPrivateFieldGet(this, _SmoothScroll_anchors, "f").forEach((anchor) => anchor.addEventListener("click", __classPrivateFieldGet(this, _SmoothScroll_handleClick, "f")));
             }
         });
         // ── Private ──────────────────────────────────────────────────────────────
         _SmoothScroll_handleClick.set(this, (e) => {
             const anchor = e.currentTarget;
-            const href = anchor.getAttribute('href');
-            if (!href || href === '#')
+            const href = anchor.getAttribute("href");
+            if (!href || href === "#")
                 return;
             const target = document.querySelector(href);
             if (!target)
                 return;
             e.preventDefault();
-            const top = target.getBoundingClientRect().top + window.scrollY - __classPrivateFieldGet(this, _SmoothScroll_nav, "f").getHeight();
-            window.scrollTo({ top, behavior: 'smooth' });
+            const top = target.getBoundingClientRect().top +
+                window.scrollY -
+                __classPrivateFieldGet(this, _SmoothScroll_nav, "f").getHeight();
+            window.scrollTo({ top, behavior: "smooth" });
         });
         __classPrivateFieldSet(this, _SmoothScroll_nav, nav, "f");
         __classPrivateFieldSet(this, _SmoothScroll_anchors, document.querySelectorAll('a[href^="#"]'), "f");
